@@ -1,0 +1,62 @@
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		    <form id="Form1" runat="server">
+			<table width="100%" border="0" cellpadding="3" cellspacing="1">					
+			    <tr>
+			        <td width="20%">
+			            <asp:Label runat="server" ID="lblPage">
+			            </asp:Label>
+			        </td>
+					<td align="right">	
+					    <asp:DropDownList ID="selCategory" runat="server" DataTextField="cateName" DataValueField="cateCode" AutoPostBack="true">
+					    </asp:DropDownList>&nbsp;
+					    <asp:TextBox ID="txtKeyword" runat="server" Width="100px" Text="메뉴명" ></asp:TextBox>
+						&nbsp; <asp:ImageButton ID="ImageButton1" ImageUrl="/admin/img/button/sear.gif" runat="server"/>
+					</td>
+				</tr>					
+			</table>
+			<asp:Repeater ID="tblList" runat="server">
+                <HeaderTemplate>
+                <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#cccccc">
+				    <tr align="center">
+					    <td bgcolor="#f9f9f9" width="10%">번호</td>	
+					    <td bgcolor="#f9f9f9" width="20%">카테고리</td>
+					    <td bgcolor="#f9f9f9" width="20%">상품명</td>
+					    <td bgcolor="#f9f9f9" width="25%">가격</td>
+					    <td bgcolor="#f9f9f9" width="25%">등록일</td>
+				    </tr>     
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr align="center">
+					    <td bgcolor="#ffffff" width="10%"></td>						
+					    <td bgcolor="#ffffff" width="20%"></td>
+					    <td bgcolor="#ffffff" width="20%"></td>
+					    <td bgcolor="#ffffff" width="25%"></td>
+					    <td bgcolor="#ffffff" width="25%"></td>
+				    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                </table>
+                </FooterTemplate>
+            </asp:Repeater>	
+			</form>
+			<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#ffffff">
+				<tr><td height="15"><!--간격조절 --></td></tr>
+				<tr>
+					<td align="right" height="22"">
+					<!-- 페이지 Navi 자리~~~-->
+					</td>
+				</tr>
+			</table>
+			<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#ffffff">
+				<tr><td height="15"><!--간격조절 --></td></tr>
+				<tr>
+					<td align="right" height="22"">
+						<a href="prodWrite.aspx?top=3"><img src="../img/button/write.gif" border="0"></a>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>		
+</table>

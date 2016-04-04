@@ -1,0 +1,57 @@
+<table cellSpacing="0" cellPadding="0" width="600" border="0">
+<TBODY>
+	<tr>
+		<td align="center" height="1"></td>
+	</tr>
+	<tr>
+		<td>
+			<table cellSpacing="1" cellPadding="3" width="100%" bgColor="#cccccc" border="0">		
+                <tr>
+	                <td align="center" width="20%" bgColor="#f0f0f0">설문내용</td>
+	                <td align="left" width="80%" bgColor="#ffffff">&nbsp;<asp:Label ID="lblQues" runat="server"></asp:Label></td>					
+		        </tr>		
+		        <tr>
+	                <td align="center" width="20%" bgColor="#f0f0f0">설문기간</td>
+	                <td align="left" width="80%" bgColor="#ffffff">&nbsp;<asp:Label ID="lblTerm" runat="server"></asp:Label></td>					
+		        </tr>		
+	            <tr>
+	                <td align="center" width="20%" bgColor="#f0f0f0">참여자수</td>
+	                <td align="left" width="80%" bgColor="#ffffff">&nbsp;<asp:Label ID="lblTotalCnt" runat="server"></asp:Label>명</td>	
+		        </tr>
+		        <tr>
+	                <td align="center" width="20%" bgColor="#f0f0f0">참여결과</td>
+	                <td align="left" width="80%" bgColor="#ffffff" height="150px">
+	                    <asp:Repeater ID="tblResult" runat="server">
+	                         <HeaderTemplate>
+	                            <table width="100%" bgcolor="#ffffff">
+	                        </HeaderTemplate>
+                            <ItemTemplate>
+                                 <tr valign ="top">
+                                    <td width="40%" height="25" align="left">
+                                        <%# Eval("title").ToString() %>
+                                    </td>
+                                    <td align="left">
+                                         <%# DrawBar(Eval("per").ToString())%>     
+                                    </td>
+                        </tr>                     
+                            </ItemTemplate>
+                            <FooterTemplate>
+	                            </table>
+	                        </FooterTemplate>
+	                    </asp:Repeater>
+	                </td>	
+		        </tr>
+	        </table>    
+	        <tr>
+		        <td align="center" height="80">		 
+		            <form runat="server">
+		            <asp:ImageButton runat="server" ID="btnList" ImageUrl= "/admin/img/button/list.gif" />&nbsp;&nbsp;
+		            <asp:ImageButton runat="server" ID="btnModi" ImageUrl= "/admin/img/button/modi.gif" />&nbsp;&nbsp;
+		            <asp:ImageButton runat="server" ID="btnDel" ImageUrl= "/admin/img/button/del.gif" />&nbsp;&nbsp;
+		            </form>
+		        </td>
+	        </tr>
+		</td>
+	</tr>
+</TBODY>
+</table>

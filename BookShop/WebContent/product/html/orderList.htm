@@ -1,0 +1,59 @@
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		    <form id="Form1" runat="server">			    
+		    <table height="30" cellSpacing="0" cellPadding="0" width="600" border="0">
+	            <tr>
+		            <td align="right" bgColor="#ffffff" colSpan="2" height="10"></td>
+	            </tr>
+	            <tr>
+		            <td align="right" bgColor="#ffffff" colSpan="2" height="22">
+		            <a href="#" onclick="selectAll();"><img src="/admin/img/button/all_sel.gif" border="0"></a>
+		            &nbsp;&nbsp;&nbsp;
+		            <a href="#" onclick="selectLabelPrint();"><img src="/admin/img/button/print.gif" border="0"></a>
+		            </td>
+	            </tr>
+            </table>	
+			<asp:Repeater ID="tblList" runat="server">
+                <HeaderTemplate>
+                <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#cccccc">
+				    <tr align="center">
+					    <td bgcolor="#f9f9f9" width="7%">선택</td>	
+					    <td bgcolor="#f9f9f9" width="25%">주문번호</td>
+					    <td bgcolor="#f9f9f9" width="13%">주문자</td>
+					    <td bgcolor="#f9f9f9" width="16%">주문일</td>
+					    <td bgcolor="#f9f9f9" width="14%">상태</td>
+					    <td bgcolor="#f9f9f9" width="14%">결재</td>
+					    <td bgcolor="#f9f9f9" width="11%">수정</td>
+				    </tr>     
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr align="center">
+					    <td bgcolor="#ffffff" width="7%"><input type='checkbox' id='selectBox' name='selectBox'></td>
+					    <td bgcolor="#ffffff" width="25%"><%# Eval("orderID").ToString()%></td>
+					    <td bgcolor="#ffffff" width="13%"><%# Eval("ordName").ToString()%></td>
+					    <td bgcolor="#ffffff" width="16%"><%# Eval("ymd").ToString()%></td>
+					    <td bgcolor="#ffffff" width="14%">
+							<select>
+								<option value="0">준비중
+								<option value="1">베송중
+								<option value="2">완료
+							</select>
+						</td>
+					    <td bgcolor="#ffffff" width="14%">
+							<select>
+								<option value="0">미입금
+								<option value="1">결재확인
+							</select>
+						</td>
+					    <td bgcolor="#ffffff" width="11%"><img src='/admin/img/button/modi.gif' border='0'></td>
+				    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                </table>
+                </FooterTemplate>
+            </asp:Repeater>			
+			</form>
+		</td>
+	</tr>		
+</table>

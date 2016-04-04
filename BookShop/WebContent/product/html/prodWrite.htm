@@ -1,0 +1,40 @@
+<table cellSpacing="0" cellPadding="0" width="600" border="0">
+		<TBODY>
+			<tr>
+				<td align="center" height="1"></td>
+			</tr>
+			<tr>
+				<td>
+					<table cellSpacing="1" cellPadding="3" width="100%" bgColor="#cccccc" border="0">		<tr>
+							<td align="center" width="25%" bgColor="#f0f0f0">상품명</td>
+							<td colspan="3" align="left" width="75%" bgColor="#ffffff">&nbsp;<asp:TextBox runat="server" ID="txtName" Width="425"></asp:TextBox></td>
+						</tr>				
+						<tr>
+							<td align="center" width="25%" bgColor="#f0f0f0">가격</td>
+							<td align="left" width="30%" bgColor="#ffffff">&nbsp;<asp:TextBox runat="server" ID="txtPrice" Width="100"></asp:TextBox></td>
+							<td align="center" width="25%" bgColor="#f0f0f0">카테고리</td>
+							<td align="left" width="45%" bgColor="#ffffff">&nbsp;<asp:DropDownList runat="server" DataTextField="cateName" DataValueField="cateCode" ID="selCategory" Width="150"></asp:DropDownList></td>
+						</tr>						
+						<tr>
+							<td align="center" width="25%" bgColor="#f0f0f0">상품내용</td>
+							<td colspan="3" align="left" width="75%" bgColor="#ffffff">&nbsp;<asp:TextBox runat="server" ID="txtContent" Columns="70" Rows="15" TextMode="MultiLine"></asp:TextBox></td>
+						</tr>
+						<tr>
+							<td align="center" width="25%" bgColor="#f0f0f0">상품이미지</td>
+							<td colspan="3" align="left" width="75%" bgColor="#ffffff">&nbsp;<asp:FileUpload runat="server" ID="fileImg" Width="425" /></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" height="10"></td>
+			</tr>
+			<tr>
+				<td align="center" height="22">
+				    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../img/button/write.gif"/>
+				    &nbsp;&nbsp;<a href="#"><img src="../img/button/list.gif" border="0"></a>
+				</td>
+			</tr>
+		</TBODY>
+	</table>
+</form>

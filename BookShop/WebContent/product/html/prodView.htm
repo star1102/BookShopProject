@@ -1,0 +1,41 @@
+<form runat="server" id="frmLink">
+<table cellSpacing="0" cellPadding="0" width="600" border="0">
+	<tr>
+		<td>
+			<table cellSpacing="1" cellPadding="3" width="100%" bgColor="#cccccc" border="0">									
+				<tr>
+					<td align="center"bgColor="#ffffff" rowspan="3" width="40%"></td>
+					<td align="center"bgColor="#f9f9f9" width="20%">상품명</td>
+					<td align="left" bgColor="#ffffff"><asp:Label runat="server" ID="lblName"/></td>			
+				</tr>
+				<tr>
+					<td align="center"bgColor="#f9f9f9">가격</td>
+					<td align="left" bgColor="#ffffff"><asp:Label runat="server" ID="lblPrice"/></td>
+				</tr>		
+				<tr>
+					<td align="center"bgColor="#f9f9f9">첨부파일</td>
+					<td align="left" bgColor="#ffffff"><asp:LinkButton Text="파일명" runat="server" ID="linkFile"></asp:LinkButton></td>
+				</tr>	
+				<tr>
+					<td align="center" bgColor="#f9f9f9" colspan="3">
+					    상품상세설명
+					</td>					
+				</tr>
+				<tr>
+					<td align="center" bgColor="#ffffff" colspan="3">
+					    <asp:Label runat="server" ID="lblContent"></asp:Label>
+					</td>					
+				</tr>		
+			</table>
+		</td>
+	</tr>	
+	<tr>
+		<td align="center" height="80">
+		    
+		        <asp:ImageButton runat="server" ID="btnList" ImageUrl= "/admin/img/button/list.gif" />&nbsp;&nbsp;
+		        <asp:ImageButton runat="server" ID="btnModi" ImageUrl= "/admin/img/button/modi.gif" />&nbsp;&nbsp;
+		        <asp:ImageButton runat="server" ID="btnDel" ImageUrl= "/admin/img/button/del.gif" />&nbsp;&nbsp;
+		</td>
+	</tr>
+</table>
+</form> 

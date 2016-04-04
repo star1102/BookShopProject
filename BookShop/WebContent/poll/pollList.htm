@@ -1,0 +1,50 @@
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		    <form id="Form1" runat="server">
+			<table width="100%" border="0" cellpadding="3" cellspacing="1">					
+			    <tr>
+			        <td width="20%">
+			            <asp:Label runat="server" ID="lblPage">
+			            </asp:Label>
+			        </td>
+					<td align="right"></td>
+				</tr>					
+			</table>
+			<asp:Repeater ID="tblList" runat="server">
+                <HeaderTemplate>
+                <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#cccccc">
+				    <tr align="center">
+					    <td bgcolor="#f9f9f9" width="10%">번호</td>	
+					    <td bgcolor="#f9f9f9" width="40%">설문제목</td>
+					    <td bgcolor="#f9f9f9" width="25%">기간</td>
+					    <td bgcolor="#f9f9f9" width="15%">등록일</td>
+					    <td bgcolor="#f9f9f9" width="10%">참여</td>		    
+				    </tr>     
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr align="center">
+					    <td bgcolor="#ffffff" width="10%"></td>	
+					    <td bgcolor="#ffffff" width="40%"></td>
+					    <td bgcolor="#ffffff" width="25%"></td>
+					    <td bgcolor="#ffffff" width="15%"></td>	
+					    <td bgcolor="#ffffff" width="10%"></td>	
+				    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                </table>
+                </FooterTemplate>
+            </asp:Repeater>	
+			</form>
+			<List:PageNevi runat="server" ID="myPageNavigator" />
+			<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#ffffff">
+				<tr><td height="15"><!--간격조절 --></td></tr>
+				<tr>
+					<td align="right" height="22"">
+						<a href="pollWrite.aspx?top=3"><img src="/admin/img/button/write.gif" border="0"></a>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>		
+</table>

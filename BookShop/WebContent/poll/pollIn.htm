@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<HEAD>	    
+		<title>관리자모드</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+		<LINK href="/admin/common/admin.css" type="text/css" rel="stylesheet">
+	</HEAD>
+	<body leftMargin="10" topMargin="10">
+        <form id="Form1" runat="server">
+        <asp:HiddenField runat="server" ID="hideNo" />
+        <table width="400" border="0" cellspacing="0" cellpadding="0">
+	        <tr>
+		        <td>
+		            <table cellSpacing="1" cellPadding="3" width="100%" bgColor="#cccccc" border="0">                    
+                            <tr>
+                                <td style="width: 80px; height: 25px; background-color: #EAF0D2;" align="center">질문</td>
+                                <td style="height: 25px; background-color: #FFFFFF; padding-left: 3px; text-align: left;" colspan="3">
+                                    <asp:Label ID="lblQues" runat="server"></asp:Label>
+                                </td>
+                            </tr>                    
+                            <tr>
+                                <td style="width: 80px; height: 25px; background-color: #EAF0D2;" align="center">설문 기간</td>
+                                <td style="width: 270px; background-color: #FFFFFF; padding-left: 3px; text-align: left;" colspan="3">
+                                    <asp:Label ID="lblTerm" runat="server"></asp:Label>
+                                </td>                        
+                            </tr>                    
+                            <tr style="background-color: #FFFFFF;">
+                                <td style="width: 80px; height: 25px; background-color: #EAF0D2;" align="center">항목</td>
+                                <td style="height: 150px; padding: 5px 5px 5px 3px; text-align: left; vertical-align: top;" colspan="3">
+                                    <asp:RadioButtonList ID="rblItems" runat="server">
+                                    </asp:RadioButtonList>
+                                </td>
+                            </tr>
+                        </table>
+                        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#ffffff">
+				        <tr><td height="15"><!--간격조절 --></td></tr>
+				        <tr>
+					        <td align="right" height="22"">
+						        <asp:ImageButton runat="server" ID="btnVote" ImageUrl="/admin/img/button/poll_button.gif" OnClick="btnVote_Click" />
+					        </td>
+				        </tr>
+			        </table>
+		        </td>
+	        </tr>
+        </table>	
+        </form>
+    </body>
+</html>

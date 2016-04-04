@@ -1,0 +1,30 @@
+<form runat="server">
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+    <tr><td height="10"></td></tr>
+    <tr>
+        <td align="right">총판매량 : <asp:Label runat="server" ID="lblTotal" ></asp:Label></td>
+    </tr>
+    <tr><td height="10"></td></tr>
+</table>
+<table id="tblStati" runat="server" width="600" border="0" cellspacing="0" cellpadding="0">
+<tr>
+		<td>		                
+            <asp:calendar id="CalendarSales" runat="server" NextPrevFormat="FullMonth" Width="559px"
+				BorderStyle="None" EnableViewState="False" OtherMonthDayStyle-CssClass="calendar4"
+				WeekendDayStyle-CssClass="calendar2" TitleStyle-Height="38" TitleStyle-CssClass="calendar4_" DayHeaderStyle-CssClass="con_tit1"
+				NextPrevStyle-CssClass="calendar4" DayStyle-HorizontalAlign="Left" DayStyle-CssClass="calendar1" TodayDayStyle-ForeColor="green"
+				SelectMonthText="66" PrevMonthText="" ToolTip="일일판매량">
+				<TodayDayStyle ForeColor="Blue" BackColor="#FFFFC0"></TodayDayStyle>
+				<DayStyle HorizontalAlign="Left" Height="72px" BorderWidth="1px" BorderColor="#C7D49E" CssClass="calendar1" VerticalAlign="Top"></DayStyle>
+				<NextPrevStyle CssClass="calendar4" BackColor="White"></NextPrevStyle>
+				<DayHeaderStyle HorizontalAlign="Center" Height="22px" BorderWidth="1px" BorderStyle="Solid" BorderColor="#C7D49E" CssClass="con_tit1" BackColor="#F0F4E0"></DayHeaderStyle>
+				<TitleStyle Height="38px" BorderColor="Transparent" CssClass="calendar4_" BackColor="Transparent"></TitleStyle>
+				<WeekendDayStyle CssClass="calendar2" BackColor="White" ForeColor="Red"></WeekendDayStyle>
+				<OtherMonthDayStyle CssClass="calendar4" BackColor="White"></OtherMonthDayStyle>
+                <SelectedDayStyle BackColor="#FFC0C0" BorderColor="White" BorderStyle="Dotted" Font-Bold="True"
+                    ForeColor="#404040" />
+			</asp:calendar>
+		</td>
+</tr>			
+</table>
+</form>

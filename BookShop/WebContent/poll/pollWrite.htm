@@ -1,0 +1,65 @@
+<form id="frmwrite" name="frmwrite" runat="server">   
+	<table cellSpacing="0" cellPadding="0" width="600" border="0">
+		<TBODY>
+			<tr>
+				<td align="center" height="1"></td>
+			</tr>
+			<tr>
+				<td>
+					<table cellSpacing="1" cellPadding="3" width="100%" bgColor="#cccccc" border="0">		<tr>
+							<td align="center" width="25%" bgColor="#f0f0f0">제목</td>
+							<td colspan="3" align="left" width="75%" bgColor="#ffffff">&nbsp;<asp:TextBox runat="server" ID="txtTitle" Width="400"></asp:TextBox></td>
+						</tr>				
+						<tr>
+							<td align="center" width="25%" bgColor="#f0f0f0">설문시작일</td>
+							<td align="left" width="30%" bgColor="#ffffff">&nbsp;
+							    <asp:DropDownList runat="server" ID="sYear"></asp:DropDownList>년&nbsp;
+							    <asp:DropDownList runat="server" ID="sMonth"></asp:DropDownList>월&nbsp;
+							    <asp:DropDownList runat="server" ID="sDay"></asp:DropDownList>일&nbsp;
+							</td>
+							<td align="center" width="25%" bgColor="#f0f0f0">설문종료일</td>
+							<td align="left" width="45%" bgColor="#ffffff">&nbsp;
+							    <asp:DropDownList runat="server" ID="eYear"></asp:DropDownList>년&nbsp;
+							    <asp:DropDownList runat="server" ID="eMonth"></asp:DropDownList>월&nbsp;
+							    <asp:DropDownList runat="server" ID="eDay"></asp:DropDownList>일&nbsp;
+							</td>
+						</tr>						
+						<tr>
+							<td align="center" width="25%" bgColor="#f0f0f0">항목갯수</td>
+							<td colspan="3" align="left" width="75%" bgColor="#ffffff">&nbsp;
+							    <asp:DropDownList runat="server" ID="selItemsNum">
+							        <asp:ListItem Text="1" Value="1"></asp:ListItem>
+							        <asp:ListItem Text="2" Value="2"></asp:ListItem>							    
+							        <asp:ListItem Text="3" Value="3"></asp:ListItem>
+							        <asp:ListItem Text="4" Value="4"></asp:ListItem>
+							        <asp:ListItem Text="5" Value="5"></asp:ListItem>
+							    </asp:DropDownList>개&nbsp;
+							</td>
+						</tr>
+						<tr>
+						    <td align="center" width="25%" bgColor="#f0f0f0">항목</td>
+							<td colspan="3" align="left" width="75%" bgColor="#ffffff">
+							    <asp:Panel runat="server" ID="pnlItems">
+							        <asp:Panel runat="server" ID="pnlItems1">1&nbsp;&nbsp;<asp:TextBox runat="server" ID="txtNum1" Width="300"></asp:TextBox><br /></asp:Panel>
+							        <asp:Panel runat="server" ID="pnlItems2" Visible="false">2&nbsp;&nbsp;<asp:TextBox runat="server" ID="txtNum2" Width="300"></asp:TextBox><br /></asp:Panel>
+							        <asp:Panel runat="server" ID="pnlItems3" Visible="false">3&nbsp;&nbsp;<asp:TextBox runat="server" ID="txtNum3" Width="300"></asp:TextBox><br /></asp:Panel>
+							        <asp:Panel runat="server" ID="pnlItems4" Visible="false">4&nbsp;&nbsp;<asp:TextBox runat="server" ID="txtNum4" Width="300"></asp:TextBox><br /></asp:Panel>
+							        <asp:Panel runat="server" ID="pnlItems5" Visible="false">5&nbsp;&nbsp;<asp:TextBox runat="server" ID="txtNum5" Width="300"></asp:TextBox><br /></asp:Panel>							    
+							    </asp:Panel>						    
+							</td>							
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" height="10"></td>
+			</tr>
+			<tr>
+				<td align="center" height="22">
+				    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../img/button/write.gif"/>
+				    &nbsp;&nbsp;<a href="#"><img src="../img/button/list.gif" border="0"></a>
+				</td>
+			</tr>
+		</TBODY>
+	</table>
+</form>

@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import ="com.mybook.util.Utilities" %>
+<%
+final String IMAGEPATH = "/MyBookShop/img";
+final String ROOTPATH_MEM ="/MyBookShop/member/member.jsp";
+final String CONTEXTPATH_MEM="/member/member.jsp";
+final String ROOTPATH_CONS ="/MyBookShop/consel/counsel.jsp";
+final String CONTEXTPATH_CONS="/consel/counsel.jsp";
+
+//메인메뉴 (1부, 2부, 3부)
+String Mmenu 
+	= Utilities.isNull(request.getParameter("Mmenu"), "");
+String Smenu //서브메뉴 (1부 1장 ,2장)
+	= Utilities.isNull(request.getParameter("Smenu"), "2");
+String mode //서브메뉴 (1장 1절, 2절 , 3절)
+= Utilities.isNull(request.getParameter("mode"), "l");
+
+//로그인 정보 가져오기
+String id = (String)session.getAttribute("adminID");
+String grade = (String)session.getAttribute("adminG");
+
+//현재 페이지 정보 가져오기
+int cpage=
+Integer.parseInt(
+	Utilities.isNull(request.getParameter("curpage"), "1")
+		);
+
+String[] arrArea={
+		"서울", "경기", "광주", "대구", "대전", "부산", "울산",
+		"인천", "강원", "충북", "충남", "경북", "광주", "경남",
+		"전북", "전남", "제주"};
+%>
